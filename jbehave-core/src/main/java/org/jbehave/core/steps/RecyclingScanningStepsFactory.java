@@ -6,6 +6,11 @@ import java.util.Map;
 import org.jbehave.core.configuration.Configuration;
 import org.jbehave.core.configuration.MostUsefulConfiguration;
 
+/**
+ * An {@link InjectableStepsFactory} that extends {@link ScanningStepsFactory}
+ * to provide the ability to reuse existing instances of steps classes instead
+ * of re-instantiating the classes.
+ */
 public class RecyclingScanningStepsFactory extends ScanningStepsFactory {
     private Map<Class<?>, Object> steps = new HashMap<Class<?>, Object>();
 
